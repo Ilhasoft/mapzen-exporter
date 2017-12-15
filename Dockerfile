@@ -26,4 +26,5 @@ RUN cd ..
 RUN pip install -r pip-required.txt
 
 RUN cd exporter
-RUN cp settings.yaml.temp settings.yaml
+
+CMD ["python", "exporter.py", "run_all"]
