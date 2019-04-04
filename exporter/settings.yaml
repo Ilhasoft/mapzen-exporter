@@ -1,9 +1,9 @@
 sources:
-    data_dir: '/home/username/data/' # full path to the data file
-    output_dir: '/home/username/data/output/' # full path to output directory
-    data_url: 'http://download.geofabrik.de/africa-latest.osm.pbf'
-    input_dir: '/home/username/data/input/'
-    filename: 'africa-osm.pbf'
+    data_dir: '~/data/' # full path to the data file
+    output_dir: '~/data/output/' # full path to output directory
+    data_url: ${DATA_URL}`
+    input_dir: '~/data/input/'
+    filename: 'mapfile.pbf'
 
 admin_levels:
     - 2
@@ -13,7 +13,7 @@ admin_levels:
 
 tolerance: 0.001
 
-country_osm_id: 192787  # OSM Country Id,
+country_osm_id: ${COUNTRY_OSM_ID}  # OSM Country Id,
 
 # logging setup
 logging:
