@@ -27,10 +27,11 @@ RUN cd gdal-1.11.2 \
     && make \
     && make install
 
+RUN mkdir /data
+
 RUN cd $APP_PATH \
     && pip install --upgrade setuptools pip \
     && pip install -r pip-required.txt
 
 RUN cd exporter
-
-CMD ["python", "exporter.py", "run_all"]
+CMD ["/bin/bash"] 
