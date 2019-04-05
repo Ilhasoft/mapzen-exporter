@@ -1,0 +1,13 @@
+version: '3.3'
+
+services:
+  mapzen-exporter:
+    image: ${DOCKER_IMAGE_NAME:-ilha/mapzen-exporter}:${TAG:-latest}
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile
+    volumes:
+       - maps-dir:/data
+
+volumes:
+  maps-dir:
