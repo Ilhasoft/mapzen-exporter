@@ -1,5 +1,5 @@
 sources:
-    data_dir: '/data/exporter' # full path to the data file
+    data_dir: '/data/exporter/' # full path to the data file
     output_dir: '/data/exporter/' # full path to output directory
     data_url: ${DATA_URL}`
     input_dir: '/data/exporter/'
