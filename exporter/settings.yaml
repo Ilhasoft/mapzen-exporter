@@ -1,8 +1,8 @@
 sources:
-    data_dir: '~/data/' # full path to the data file
-    output_dir: '~/data/output/' # full path to output directory
+    data_dir: '/data/exporter' # full path to the data file
+    output_dir: '/data/exporter/' # full path to output directory
     data_url: ${DATA_URL}`
-    input_dir: '~/data/input/'
+    input_dir: '/data/exporter/'
     filename: 'mapfile.pbf'
 
 admin_levels:
