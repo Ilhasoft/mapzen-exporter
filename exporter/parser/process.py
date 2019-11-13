@@ -173,26 +173,25 @@ def parse(dir_path, output_dir, admin_levels, tolerance, country_id):
                 output_dir, out_base_file.format(
                     level=ancestor_level))
 
-        result = parse_features(
+        for collection, simplified_collection in parse_features(
             f_name,
             ancestor_file,
             tolerance,
             level_count,
-            country_id)
-        collection, simplified_collection = result.next()
+            country_id):
 
-        file_path = os.path.join(
-            output_dir, out_base_file.format(
-                level=level_count))
-        temp_file = '_'.join([str(level_count), 'simplified'])
-        simplify_file_path = os.path.join(
-            output_dir, out_base_file.format(
-                level=temp_file))
+            file_path = os.path.join(
+                output_dir, out_base_file.format(
+                    level=level_count))
+            temp_file = '_'.join([str(level_count), 'simplified'])
+            simplify_file_path = os.path.join(
+                output_dir, out_base_file.format(
+                    level=temp_file))
 
-        write(file_path, collection)
-        write(simplify_file_path, simplified_collection)
-        LOG.info('Complete parsing admin level : {} '.format(level_count))
-        level_count += 1
+            write(file_path, collection)
+            write(simplify_file_path, simplified_collection)
+            LOG.info('Complete parsing admin level : {} '.format(level_count))
+            level_count += 1
 
     LOG.info('Completed extraction of files from: {} to {}'.format(
         dir_path, output_dir)
