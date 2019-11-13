@@ -47,7 +47,7 @@ def read_feature(filename):
 
     while is_data_in_layer:
         is_data_in_layer = False
-        for iLayer in xrange(lyr_count):
+        for iLayer in range(lyr_count):
             lyr = data_source.GetLayer(iLayer)
             feat = lyr.GetNextFeature()
             while feat is not None:
