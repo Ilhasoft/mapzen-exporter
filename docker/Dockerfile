@@ -31,6 +31,7 @@ RUN mkdir /data
 
 RUN cd $APP_PATH \
     && pip install --upgrade setuptools pip \
+    && pip install numpy==1.16.5 \
     && pip install -r pip-required.txt
 
 ENV LD_LIBRARY_PATH=/usr/local/lib
