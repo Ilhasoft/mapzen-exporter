@@ -1,8 +1,8 @@
-PyYAML
-pep8==1.5.6
-pylint==1.2.0
-wgetter
-geojson
-shapely
-rtree
+PyYAML==5.1.2
+Rtree==0.8.3
+Shapely==1.6.4.post2
+argparse==1.2.1
+numpy==1.16.5
 pygdal==1.11.2.3
+wgetter==0.7
+wsgiref==0.1.2
